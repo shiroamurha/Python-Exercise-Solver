@@ -42,7 +42,7 @@ def solve(debug=True):
         for quest in questions:
             # requesting the prompt's response to the AI
             solved = f'{ get_answer(client_api, f"{prefix}{quest}") }\n\n'
-
+            solved = solved.replace('`', '')
             # debugging the ongoing progress
             if debug:
                 print(f' - question {numero_lista}-{numero_ex} done XD')
